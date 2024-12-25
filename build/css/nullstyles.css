@@ -1,0 +1,82 @@
+/* Nullstyles - CSS Reset */
+
+/* Box sizing reset for consistency */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margins */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd,
+ul, ol,
+figure,
+hr,
+fieldset, legend {
+    margin: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default text decoration and inherit font */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove border and inherit font settings */
+/* button, input, textarea, select {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+} */
+
+/* Remove appearance styling for form elements */
+/* button, input, select, textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+} */
+
+/* Prevent images and media from exceeding their container width */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Reset tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Ensure full height for html and body */
+html, body {
+    height: 100%;
+}
+
+/* Cursor and focus styles for better UX */
+button, [role="button"] {
+    cursor: pointer;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    outline-offset: none;
+}

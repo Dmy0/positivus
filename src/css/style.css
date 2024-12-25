@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(./fonts/SpaceGrotesk-Regular.ttf) format('truetype'); 
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(./fonts/SpaceGrotesk-Bold.ttf) format('truetype'); 
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    --dark: #191A23;
+    --green: #B9FF66;
+    --grey: #F3F3F3;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1250px;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    gap: inherit;
+    flex-direction: inherit;
+    padding: 70px 0;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .navbar__logo {
+    max-width: 220px;
+    margin: 0 210px 0 0;
+  }
+
+  .navbar__item {
+    cursor: pointer;
+    text-wrap: nowrap;
+    padding: 5px;
+  }
+
+  .navbar__item-button {
+    text-wrap: nowrap;
+    cursor: pointer;
+    padding: 20px 35px;
+    color: var(--dark);
+    border: 1px solid var(--dark);
+    background-color: var(--grey);
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .navbar__item:hover {
+    background-color: var(--green);
+    border-radius: 6px;
+    
+  }
+
+  .navbar__item-button:hover {
+    background-color: var(--dark);
+    color: var(--grey);
+    transition: background-color .5s ease;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+  }
+
+  .header__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 535px;
+    gap: 35px;
+  }
+
+  .header__left-title {
+    color: var(--dark);
+    font-size: 60px;
+    line-height: 77px;
+    font-weight: 500;
+  }
+
+  .header__left-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .header__left-button {
+    max-width: 265px;
+  }
+
+  .header__left-button:hover {
+    background-color: var(--green);
+    color: var(--dark);
+    transition: background-color .5s ease;
+  }
+
+  .btn {
+    padding: 20px 35px;
+    color: var(--grey);
+    background-color: var(--dark);
+    border-radius: 14px;
+    border: 1px solid var(--dark);
+  }
+
+  .header__right-illustration {
+    max-width: 600px;
+  }
+
+  .header__bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 95px;
+  }
+
+  .header__bottom-items {
+    max-width: 125px;
+  }
+
+  
