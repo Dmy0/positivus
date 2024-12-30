@@ -1,7 +1,9 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
-const del = require('del');
-const path = require('path');
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import { deleteAsync } from 'del';
+import path from 'path';
+
+const bs = browserSync.create();
 
 // Paths
 const paths = {
@@ -22,59 +24,56 @@ const paths = {
 };
 
 // Clean Build Directory
-async function clean() {
-    const { deleteAsync } = await import('del');
+export async function clean() {
     return deleteAsync([paths.build.base]);
-  }
+}
 
 // Copy HTML to Build
-function copyHtml() {
+export function copyHtml() {
     return gulp.src(paths.src.html).pipe(gulp.dest(paths.build.base));
 }
 
 // Copy JavaScript to Build
-function copyJs() {
+export function copyJs() {
     return gulp.src(paths.src.js).pipe(gulp.dest(paths.build.js));
 }
-// Copy Css to Build
-function copyCss() {
+
+// Copy CSS to Build
+export function copyCss() {
     return gulp.src(paths.src.css).pipe(gulp.dest(paths.build.css));
 }
 
 // Copy Images to Build
-function copyImages() {
+export function copyImages() {
     return gulp.src(paths.src.images).pipe(gulp.dest(paths.build.images));
 }
 
 // Copy Fonts to Build
-function copyFonts() {
+export function copyFonts() {
     return gulp.src(paths.src.fonts).pipe(gulp.dest(paths.build.fonts));
 }
 
 // Serve and Watch for Changes
-function serve() {
-    browserSync.init({
+export function serve() {
+    bs.init({
         server: {
             baseDir: paths.build.base
         },
         notify: false
     });
 
-
-    gulp.watch(paths.src.html, copyHtml).on('change', browserSync.reload);
-    gulp.watch(paths.src.js, copyJs).on('change', browserSync.reload);
-    gulp.watch(paths.src.images, copyImages).on('change', browserSync.reload);
-    gulp.watch(paths.src.fonts, copyFonts).on('change', browserSync.reload);
+    gulp.watch(paths.src.html, copyHtml).on('change', bs.reload);
+    gulp.watch(paths.src.js, copyJs).on('change', bs.reload);
+    gulp.watch(paths.src.css, copyCss).on('change', bs.reload);
+    gulp.watch(paths.src.images, copyImages).on('change', bs.reload);
+    gulp.watch(paths.src.fonts, copyFonts).on('change', bs.reload);
 }
 
 // Build Task
-const build = gulp.series(
-    clean,
-    gulp.parallel(copyHtml,copyCss, copyJs, copyImages, copyFonts)
+export const build = gulp.series(
+  clean,
+  gulp.parallel(copyHtml, copyCss, copyJs, copyImages, copyFonts)
 );
 
 // Default Task
-exports.default = gulp.series(build, serve);
-exports.build = build;
-exports.clean = clean;
-exports.serve = serve;
+export default gulp.series(build, serve);
