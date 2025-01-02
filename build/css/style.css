@@ -139,6 +139,7 @@ body {
 
   .header__bottom-items {
     max-width: 125px;
+    filter: grayscale(1);
   }
 
   .heading {
@@ -206,6 +207,7 @@ body {
   }
   
   .card__left-top--upperTittle {
+    display: inline-block;
     font-size: 30px;
     font-weight: 500;
     line-height: 38px;
@@ -213,10 +215,10 @@ body {
     color: var(--dark);
     padding: 7px;
     border-radius: 7px;
-    width: 100%;
   }
 
   .card__left-top--lowerTittle {
+    display: inline-block;
     font-size: 30px;
     font-weight: 500;
     line-height: 38px;
@@ -224,7 +226,6 @@ body {
     color: var(--dark);
     padding: 7px;
     border-radius: 7px;
-    max-width: 100%;
   }
 
   .card__left-bottom {
