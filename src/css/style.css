@@ -35,6 +35,7 @@ body {
     gap: inherit;
     flex-direction: inherit;
     padding: 70px 0;
+    width: 100%;
   }
 
   .navbar {
@@ -346,6 +347,7 @@ body {
     border-radius: 45px;
     background-color: var(--dark);
     padding: 70px 60px;
+    width: 100%;
   }
 
   .case__content {
@@ -395,7 +397,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    right: -25px; 
+    right: -50px; 
     width: 1px; 
     height: 100%; 
     background-color: var(--grey); 
@@ -572,12 +574,12 @@ body {
 
   .team__card-content {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     padding-bottom: 28px;
     max-width: 320px;
-    max-height: 275px;
+    max-height: 270px;
   }
 
   .team__card-content-picture {
