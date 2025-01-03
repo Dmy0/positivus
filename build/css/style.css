@@ -113,7 +113,7 @@ body {
     max-width: 265px;
   }
 
-  .header__left-button:hover {
+  .btn:hover {
     background-color: var(--green);
     color: var(--dark);
     transition: background-color .5s ease;
@@ -537,9 +537,100 @@ body {
     background-color: var(--dark);
   }
 
+  .team__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .team__top  {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
+  .team__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--dark);
+    border-radius: 45px;
+    padding: 40px 35px;
+    box-shadow: 0 5px 0 0 var(--dark);
+    max-width: 390px;
+    height: 350px;
+    transition: transform .3s ease-in-out;
+  }
 
-  
-  
-  
-  
+  .team__card:hover {
+    transform: scale(1.1);
+  }
+
+  .team__card-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 28px;
+    max-width: 320px;
+    max-height: 275px;
+  }
+
+  .team__card-content-picture {
+    max-width: 105px;
+  }
+
+  .team__card-content-name {
+    text-wrap: nowrap;
+  }
+
+  .team__card-content-name > :nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    color: var(--dark);
+  }
+
+  .team__card-content-name > :nth-child(2) {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    color: var(--dark);
+  }
+
+  .team__card-content-linkedin {
+    max-width: 34px;
+    align-self: flex-start;
+  }
+
+  .team__card-about {
+    position: relative;
+    padding: 28px 0;
+  }
+
+  .team__card-about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: var(--dark);
+  }
+
+  .team__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .team__button {
+    width: 270px;
+    align-self: flex-end;
+  }
