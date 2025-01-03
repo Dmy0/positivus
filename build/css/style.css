@@ -279,13 +279,24 @@ body {
     background-color: var(--green);
   }
 
-  .proposal {
+  .proposal__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--grey);
     gap: 190px;
-   
+    position: relative;
+  }
+
+  .proposal__illustration {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    background: url(../img/proposal/proposal-illustration.png) no-repeat center;
+    background-size: contain;
+    width: 360px;
+    height: 400px;
+    display: block;
   }
 
   .proposal__left {
@@ -295,6 +306,7 @@ body {
     justify-content: space-between;
     gap: 26px;
     max-width: 500px;
+    padding: 60px;
   }
 
   .proposal__left-title {
@@ -603,6 +615,7 @@ body {
     height: 34px;
     display: block;
 }
+
   .team__card-about {
     position: relative;
     padding: 28px 0;
