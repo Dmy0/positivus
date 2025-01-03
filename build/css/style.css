@@ -1,21 +1,10 @@
-@font-face {
-    font-family: 'Space Grotesk';
-    src: url(./fonts/SpaceGrotesk-Regular.ttf) format('truetype'); 
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Space Grotesk';
-    src: url(./fonts/SpaceGrotesk-Bold.ttf) format('truetype'); 
-    font-weight: 500;
-    font-style: normal;
-}
 
 :root {
     --dark: #191A23;
     --green: #B9FF66;
     --grey: #F3F3F3;
+    --fonts-space-reg: spaceGroteskReg;
+    --fonts-space-bold: spaceGroteskBold;
 }
 
 html {
@@ -23,7 +12,8 @@ html {
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--fonts-space-reg);
+    
 }
 
 .container {
@@ -117,7 +107,6 @@ body {
   .btn:hover {
     background-color: var(--green);
     color: var(--dark);
-    transition: background-color .5s ease;
   }
 
   .btn {
@@ -126,6 +115,7 @@ body {
     background-color: var(--dark);
     border-radius: 14px;
     border: 1px solid var(--dark);
+    transition: background-color .5s ease;
   }
 
   .header__right-illustration {
@@ -149,6 +139,7 @@ body {
     gap: 40px;
     align-items: flex-start;
     padding: 70px 0;
+    width: 100%;
   }
 
   .title > :nth-child(1) {
@@ -181,14 +172,7 @@ body {
     gap: 40px;
   }
 
-  .services__left  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 40px;
-  }
-
-  .services__right {
+  .services__column  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -204,6 +188,8 @@ body {
     border-radius: 45px;
     border: 1px solid var(--dark);
     box-shadow: 0 5px 0 0 var(--dark);
+    width: 600px;
+    height: 310px;
   }
 
   .card__left {
@@ -437,6 +423,7 @@ body {
     box-shadow: 0 5px 0 0 var(--dark);
     width: 100%;
     transition: background-color .5s ease;
+    cursor: pointer;
   }
 
   .accordion__item-header {
@@ -547,7 +534,7 @@ body {
     gap: 40px;
   }
   
-  .team__top  {
+  .team__row  {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -575,19 +562,21 @@ body {
   .team__card-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     padding-bottom: 28px;
-    max-width: 320px;
-    max-height: 270px;
+    width: 100%; 
+    position: relative;
   }
 
   .team__card-content-picture {
+    min-width: 105px;
     max-width: 105px;
   }
 
   .team__card-content-name {
-    text-wrap: nowrap;
+    align-self: flex-end;
+    max-width: 195px;
   }
 
   .team__card-content-name > :nth-child(1) {
@@ -605,10 +594,15 @@ body {
   }
 
   .team__card-content-linkedin {
-    max-width: 34px;
-    align-self: flex-start;
-  }
-
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: url(../img/team/linkin-icon.png) no-repeat center;
+    background-size: contain;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
   .team__card-about {
     position: relative;
     padding: 28px 0;
@@ -622,14 +616,6 @@ body {
     width: 100%;
     height: 1px; 
     background-color: var(--dark);
-  }
-
-  .team__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 40px;
   }
 
   .team__button {
