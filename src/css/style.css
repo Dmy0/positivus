@@ -13,7 +13,6 @@ html {
 
 body {
     font-family: var(--fonts-space-reg);
-    
 }
 
 .container {
@@ -641,7 +640,7 @@ body {
     border-radius: 45px;
     background-color: var(--dark);
     height: 625px;
-    overflow-x: auto;
+    overflow-x: hidden;
   }
 
   .testimonials__slider {
@@ -710,4 +709,164 @@ body {
     background-size: contain;
     width: 14px;
     height: 14px;
+  }
+
+  .contact__wrap {
+    background-color: var(--grey);
+    border-radius: 45px;
+    padding: 60px 100px;
+    position: relative;
+    overflow: auto;
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 560px;
+  }
+
+  .contact__form-radiobtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 275px;
+    gap: 35px;
+    font-size: 18px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radiobtn {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: border-color 0.3s;
+  }
+
+  .radiobtn::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--green); 
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .radiobtn__label {
+    display: flex;
+    gap: 14px ;
+  }
+
+  input[type="radio"]:checked + .radiobtn::after {
+    transform: scale(1);
+  }
+  
+  .contact__form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .contact__form-field input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--dark);
+    border-radius: 14px;
+  }
+
+  .contact__form-field input:last-child {
+    height: 190px; 
+    resize: none;
+  }
+
+  .contact__form-field label {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  .contact__form-button {
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .contact__form-field::after {
+    content: "";
+    position: absolute;
+    background: url(../img/contact/sun-illustration.png) center no-repeat;
+    background-size: contain;
+    width: 650px;
+    height: 650px;
+    left: 75%;
+    
+  }
+
+  .contact__form-field::before {
+    content: "";
+    position: absolute;
+    background: url(../img/contact/dark-star.png) center no-repeat;
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    left: 75%;
+    top: 30%;
+    z-index: 1;
+  }
+  
+  .footer {
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 45px 45px 0 0;
+    padding: 55px 60px 50px 60px;
+    margin: 0 auto;
+    max-width: 1250px;
+  }
+  
+  .footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+  }
+
+  .footer__nav-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--grey);
+  }
+
+  .footer__nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer__nav-logo {
+    max-width: 180px;
+  }
+
+  .footer__nav-icons-item {
+    max-width: 30px;
   }
