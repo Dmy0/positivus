@@ -145,7 +145,7 @@ body {
     background-color: var(--green);
     border-radius: 7px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 51px;
     color: var(--dark);
   }
@@ -717,6 +717,17 @@ body {
     padding: 60px 100px;
     position: relative;
     overflow: hidden;
+  }
+
+  .contact__wrap::after {
+    content: "";
+    position: absolute;
+    background: url(../img/contact/green-star.png) center no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    left: 73%;
+    top: 52%;
   }
 
   .contact__form {
