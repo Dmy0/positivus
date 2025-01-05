@@ -647,8 +647,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 125px;
+    gap: 120px;
     position: relative;
+  }
+
+  .testimonials__slider-cards-bubble {
+    content: "";
+    background: url(../img/testimonial/bubble.png) center no-repeat;
+    background-size: contain;
+    width: 605px;
+    padding-top: 85px;
+  }
+
+  .testimonials__slider-bubble-content {
+    color: var(--grey);
+    font-size: 18px;
+    line-height: 23px;
+    padding: 48px 52px 80px 52px;
   }
 
   .testimonials__slider-cards {
@@ -656,11 +671,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
-  }
-
-  .testimonials__slider-cards-bubble {
-    padding: 84px 0;
-    width: 605px;
   }
 
   .testimonials__slider-bubble-item {
@@ -685,8 +695,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    bottom: -60px;
     max-width: 565px;
   }
 
@@ -887,7 +895,6 @@ body {
     flex-direction: column;
     gap: 30px;
     max-width: 335px;
-    padding-top: 65px;
   }
 
   .footer__contact-left-info {
@@ -908,4 +915,48 @@ body {
     font-weight: 400;
     background-color: var(--green);
     max-width: 125px;
+  }
+
+  .footer__subscription {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #292A32;
+    border-radius: 14px;
+    max-width: 635px;
+    padding: 58px 40px;
+  }
+
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 155px;
+    padding-top: 65px ;
+  }
+
+  .footer__subscription-email {
+    border-radius: 14px;
+    padding: 22px 35px;
+    background-color: #292A32;
+    border: 1px solid var(--grey);
+    width: 285px;
+  }
+
+  .footer__subscription-email::placeholder {
+    font-size: 18px;
+    color: var(--grey);
+    line-height: 23px;
+  }
+
+  .footer__subscription-button {
+    background-color: var(--green);
+    color: var(--dark);
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px 35px;
+    width: 250px;
+    border: 1px solid var(--green);
+    border-radius: 14px;
   }
