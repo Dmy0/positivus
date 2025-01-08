@@ -512,18 +512,18 @@ body {
     transition: all .4s ease-in-out;
   }
 
-  .accordion__item._active .accordion__item-info {
+  .accordion__item._open .accordion__item-info {
     opacity: 1;
     max-height: none;
     z-index: 1;
     padding: 30px 0;
   }
 
-  .accordion__item._active  {
+  .accordion__item._open  {
     background-color: var(--green);
   }
 
-  .accordion__item._active .accordion__item-header-btn::after {
+  .accordion__item._open .accordion__item-header-btn::after {
     content: none;
   }
 
@@ -643,7 +643,7 @@ body {
     overflow-x: hidden;
   }
 
-  .testimonials__slider {
+  .slider {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -651,47 +651,47 @@ body {
     position: relative;
   }
 
-  .testimonials__slider-cards-bubble {
+  .slider__cards-bubble {
     content: "";
-    background: url(../img/testimonial/bubble.png) center no-repeat;
+    background: url(../img/slider/bubble.png) center no-repeat;
     background-size: contain;
     width: 605px;
     padding-top: 85px;
   }
 
-  .testimonials__slider-bubble-content {
+  .slider__bubble-content {
     color: var(--grey);
     font-size: 18px;
     line-height: 23px;
     padding: 48px 52px 80px 52px;
   }
 
-  .testimonials__slider-cards {
+  .slider__cards {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
   }
 
-  .testimonials__slider-bubble-item {
+  .slider__bubble-item {
     padding: 20px 0 0 80px;
   }
 
-  .testimonials__slider-bubble-item > :nth-child(1) {
+  .slider__bubble-item > :nth-child(1) {
     font-size: 18px;
     font-weight: 400;
     line-height: 23px;
     color: var(--green);
   }
 
-  .testimonials__slider-bubble-item > :nth-child(2) {
+  .slider__bubble-item > :nth-child(2) {
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
     color: var(--grey);
   }
 
-  .testimonials__slider-nav {
+  .slider__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -699,33 +699,33 @@ body {
     gap: 190px;
   }
 
-  .testimonials__slider-nav-stars {
+  .slider__nav-stars {
     display: flex;
     align-items: center;
     gap: 20px;
   }
 
-  .testimonials__slider-nav-arrowLeft {
+  .slider__nav-left, .slider__nav-right {
     display: block;
-    background: url(../img/testimonial/navigation/arrow-left.png) center no-repeat;
+    background: url(../img/slider/navigation/arrow.png) no-repeat 50% 0/contain;
     background-size: contain;
     width: 20px;
     height: 20px;
-    cursor: pointer;
+    transition: background .4s ease-in-out;
   }
 
-  .testimonials__slider-nav-arrowRight {
-    display: block;
-    background: url(../img/testimonial/navigation/arrow-right.png) center no-repeat;
-    background-size: contain;
-    width: 20px;
-    height: 20px;
+  .slider__nav-left {
+    transform: scale(-1, 1);
+  }
+
+  .slider__nav-left:hover, .slider__nav-right:hover {
+    background: url(../img/slider/navigation/arrow-hover.png) no-repeat 50% 0/contain;
     cursor: pointer;
   }
   
-  .testimonials__slider-nav-stars-item {
+  .slider__nav-stars-item {
     display: block;
-    background: url(../img/testimonial/navigation/star.png) no-repeat center;
+    background: url(../img/slider/navigation/star.png) no-repeat center;
     background-size: contain;
     width: 14px;
     height: 14px;
@@ -733,7 +733,7 @@ body {
     cursor: pointer;
   }
 
-  .testimonials__slider-nav-stars-item:hover {
+  .slider__nav-stars-item:hover {
     filter: invert(50%) sepia(39%) saturate(606%) hue-rotate(34deg) brightness(150%) contrast(104%);
   }
 
@@ -755,6 +755,7 @@ body {
     height: 100px;
     left: 73%;
     top: 52%;
+    animation: scale 3s alternate infinite ease-in-out;
   }
 
   .contact__form {
@@ -851,7 +852,7 @@ body {
     width: 650px;
     height: 650px;
     left: 75%;
-    
+    animation: rotate 20s linear infinite;
   }
 
   .contact__form-field::before {
@@ -864,6 +865,7 @@ body {
     left: 75%;
     top: 30%;
     z-index: 1;
+    animation: scale 3s alternate infinite ease-in-out;
   }
   
   .footer {
@@ -1013,4 +1015,22 @@ body {
     width: 100%;
     height: 1px; 
     background-color: var(--grey);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scale {    
+  0%,100% {
+    transform: scale(1);
+  }
+  50% {
+   transform: scale(1.2);
+  }
   }
