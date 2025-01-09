@@ -23,7 +23,7 @@ function setSlider(sliderWrap, slidePosition) {
     
     const addSlidesPosition = () => {
         slides.forEach((slide, i) =>{
-            if (i === slidePosition) {
+            if (i === currentSlide) {
                 slide.classList.add("_active") 
                 slides[currentSlide + 1] ? slides[currentSlide + 1].classList.add("_right") : slides[0].classList.add("_right")
                 slides[currentSlide - 1] ? slides[currentSlide - 1].classList.add("_left") : slides[slides.length -1].classList.add("_left")
