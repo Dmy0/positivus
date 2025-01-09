@@ -64,5 +64,5 @@ function setSlider(sliderWrap, slidePosition) {
 
 }
 
-setSlider(sliderWrap, 0)
+setSlider(sliderWrap, 2)
 
