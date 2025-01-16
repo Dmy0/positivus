@@ -19,8 +19,28 @@ function setSlider(sliderWrap, slidePosition) {
     let currentSlide = slidePosition
     const slides = sliderWrap.querySelectorAll(".slide"),
           moveLeft = sliderWrap.querySelector(".moveLeft"),
-          moveRight = sliderWrap.querySelector(".moveRight")
-    
+          moveRight = sliderWrap.querySelector(".moveRight"),
+          navigation = document.querySelector(".slider__nav-stars"),
+          starsCounter = 5
+
+    for (let i = 1; i <= starsCounter; i++) {
+        const stars = document.createElement("div");
+        const starsItem = document.createElement("img");
+        stars.classList.add("stars-img");
+        starsItem.src = "../img/slider/navigation/star.png";
+
+        stars.appendChild(starsItem);
+        navigation.appendChild(stars);
+    }
+
+    const starsNavigation = () => {
+        navigation.forEach((item, i) => {
+            if (item === currentSlide) {
+                
+            }
+        })
+    }
+
     const addSlidesPosition = () => {
         slides.forEach((slide, i) =>{
             if (i === currentSlide) {
