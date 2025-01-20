@@ -20,24 +20,44 @@ function setSlider(sliderWrap, slidePosition) {
     const slides = sliderWrap.querySelectorAll(".slide"),
           moveLeft = sliderWrap.querySelector(".moveLeft"),
           moveRight = sliderWrap.querySelector(".moveRight"),
-          navigation = document.querySelector(".slider__nav-stars"),
-          starsCounter = 5
+          navigation = document.querySelector(".slider__nav-stars")
 
-    for (let i = 1; i <= starsCounter; i++) {
-        const stars = document.createElement("div");
-        const starsItem = document.createElement("img");
-        stars.classList.add("stars-img");
-        starsItem.src = "../img/slider/navigation/star.png";
+    let starsCounter = slides.length
+   
+    const starsLogic = new Promise((resolve, reject) => {
+        resolve()
+    });
 
-        stars.appendChild(starsItem);
-        navigation.appendChild(stars);
-    }
+    starsLogic.then(r =>{
+        let elem;
+        for (let i = 1; i <= starsCounter; i++) {
+            const stars = document.createElement("div");
+            stars.classList.add("stars-img");
+    
+            navigation.appendChild(stars);
+            elem = navigation
+        }
+        return elem
+    }).then(r =>{
+        const stars = r.querySelectorAll(".stars-img")
+        starsNavigation(stars)
+    })
 
-    const starsNavigation = () => {
+    const starsNavigation = (navigation) => {
         navigation.forEach((item, i) => {
-            if (item === currentSlide) {
-                
-            }
+            i === currentSlide ? item.classList.add("active") : item.classList.remove("active")
+           item.addEventListener("click", () => {
+            currentSlide = i
+            navigation.forEach((star, j) => {
+                j === currentSlide ? star.classList.add("active") : star.classList.remove("active")
+            })             
+            removeSlidesPosition()
+            addSlidesPosition()
+            moveLeft.style.pointerEvents = "none"
+            setTimeout(() =>{
+            moveLeft.style.pointerEvents = "initial"
+        }, 700)
+           })
         })
     }
 
