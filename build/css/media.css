@@ -1,0 +1,155 @@
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 45px 0;
+    max-width: 1200px;
+  }
+
+  .navbar__logo {
+    margin: 0 190px 0 0;
+  }
+
+  .navbar__item {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .services__wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 450px;
+    height: 325px;
+  }
+
+  .card__left {
+    width: 50%;
+  }
+
+  .card__left-top--upperTittle {
+    font-size: 25px;
+  }
+
+  .card__left-top--lowerTittle {
+    font-size: 25px;
+  }
+
+  .navbar__burger {
+    display: block;
+    z-index: 3;
+  }
+
+  .navbar__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate(0, -100%);
+    z-index: 4;
+    background-color: rgba(245, 247, 250, 1);
+    width: 100%;
+    height: 100%;
+    transition: 0.7s ease-in-out;
+}
+
+  .proposal__illustration  {
+  height: 90%;
+}
+
+.team__row:nth-child(1) {
+  display: none;
+}
+
+.team__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.team__button {
+  align-self: center  ;
+}
+
+.testimonials__container {
+  height: 505px;
+}
+
+.slider__cards {
+  height: 320px;
+}
+
+.slider__bubble-content{
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.slider__bubble-item {
+  padding-left: 55px;
+}
+
+.slider__cards-bubble {
+  width: 450px;
+}
+
+.slider__bubble-content {
+  padding: 0 30px 36px 30px;
+}
+
+.footer {
+  max-width: 1000px;
+}
+  
+.footer__contact {
+  gap: 120px;
+}
+
+.footer__nav {
+  gap: 90px;
+}
+
+.footer__nav-elements {
+  gap: 30px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+}
+
+@media screen and (max-width: 1050px) and (max-width: 950px) {
+   
+  }
+  
+  
+@media screen and (max-width: 850px) {
+    
+  }
+  
+@media screen and (max-width: 770px) {
+    
+  }
+  
+@media screen and (max-width: 710px) {
+    
+  }
+  
+@media screen and (max-width: 600px) {
+    
+  }
+  
+@media screen and (max-width: 440px) {
+   
+  }
+  
+@media screen and (max-width: 370px) {
+   
+  }
+  

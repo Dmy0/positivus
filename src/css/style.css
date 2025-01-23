@@ -36,11 +36,72 @@ body {
     margin: 20px auto;
     font-size: 20px;
     line-height: 28px;
+    position: relative;
   }
 
   .navbar__logo {
     max-width: 220px;
     margin: 0 210px 0 0;
+  }
+
+  .navbar__burger {
+    display: none;
+    position: absolute;
+    border-bottom: 2px solid var(--dark);
+    z-index: 3;
+    top: 35px;
+    right: 35px;
+    height: 25px;
+    width: 30px;
+  }
+
+  .navbar__burger.active {
+    border-bottom: none;
+  }
+
+  .header__wrap.active {
+    transform: none;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  
+
+  .navbar__burger:before,
+  .navbar__burger:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .navbar__burger.active::before {
+    transform: rotate(45deg);
+    top: 50%;
+    left: -1px;
+  }
+  
+  .navbar__burger.active::after {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  .navbar__burger:after {
+    top: calc(50% + 1px);
+    transform: translate(0, -50%);
+  }
+
+  .navbar__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
   }
 
   .navbar__item {
@@ -561,7 +622,7 @@ body {
     border-radius: 45px;
     padding: 40px 35px;
     box-shadow: 0 5px 0 0 var(--dark);
-    max-width: 390px;
+    width: 390px;
     height: 350px;
     transition: transform .3s ease-in-out;
   }
@@ -632,7 +693,7 @@ body {
 
   .team__button {
     width: 270px;
-    align-self: flex-end;
+    align-self: self-end;
   }
 
   .testimonials__container {

@@ -106,3 +106,15 @@ function setSlider(sliderWrap, slidePosition) {
 
 setSlider(sliderWrap, 2)
 
+const burger = document.querySelector(".navbar__burger"),
+      burgerMenu = document.querySelector(".navbar__wrap");
+
+function toggleClass(btn, overlay,navbar, hide, opacity) {
+    btn.addEventListener("click", function (event) {
+      this.classList.toggle("active");
+      navbar.classList.toggle(hide);
+      overlay.classList.toggle(opacity);
+    });
+  }
+
+toggleClass(burger, document.body, burgerMenu, "active", "overflow");
