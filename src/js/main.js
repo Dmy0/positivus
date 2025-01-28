@@ -114,7 +114,9 @@ function toggleClass(btn, overlay,navbar, hide, opacity) {
       this.classList.toggle("active");
       navbar.classList.toggle(hide);
       overlay.classList.toggle(opacity);
+   
     });
+    
   }
 
 toggleClass(burger, document.body, burgerMenu, "active", "overflow");

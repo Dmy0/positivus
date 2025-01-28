@@ -16,6 +16,12 @@
 @media screen and (max-width: 1250px) {
   .container {
     max-width: 1000px;
+    padding: 30px 0;
+  }
+
+  .navbar__logo {
+    margin-right: 10px;
+  
   }
 
   .services__wrap {
@@ -40,12 +46,16 @@
     font-size: 25px;
   }
 
-  .navbar__burger {
+  /* .navbar__burger {
     display: block;
-    z-index: 3;
+    z-index: 13;
   }
 
-  .navbar__wrap {
+  .navbar__logo {
+    z-index: 12;
+  } */
+
+  /* .navbar__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,12 +64,15 @@
     position: fixed;
     right: 0;
     top: 0;
-    transform: translate(0, -100%);
-    z-index: 4;
+    z-index: 10;
     background-color: rgba(245, 247, 250, 1);
     width: 100%;
     height: 100%;
     transition: 0.7s ease-in-out;
+} */
+
+.navbar__wrap.active {
+  transform: translate(100%, 0);
 }
 
   .proposal__illustration  {
@@ -72,7 +85,10 @@
 
 .team__row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .team__button {
@@ -124,13 +140,70 @@
 
 }
 
-@media screen and (max-width: 1050px) and (max-width: 950px) {
-   
+@media screen and (max-width: 1050px) {
+   .container {
+    max-width: 950px;
+   }
   }
   
   
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
+    .container {
+      max-width: 700px;
+    }
     
+    .header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header__right-illustration {
+     order: 1;
+    }
+
+    .header__bottom {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .services__wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card__left-bottom,
+    .card__left-bottom--greyArrow {
+      color: transparent;
+      width: 41px;
+    }
+
+    .accordion__item {
+      border: 0;
+    }
+    
+    .proposal__illustration {
+      display: none;
+    }
+
+    .proposal__wrap {
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .contact__wrap::after,
+    .contact__form-field::before,
+    .contact__form-field::after {
+      content: none;
+    }
+
+    ._left,
+    ._right {
+      opacity: 0;
+    }
   }
   
 @media screen and (max-width: 770px) {

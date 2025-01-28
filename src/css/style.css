@@ -48,7 +48,7 @@ body {
     display: none;
     position: absolute;
     border-bottom: 2px solid var(--dark);
-    z-index: 3;
+    z-index: 13;
     top: 35px;
     right: 35px;
     height: 25px;
