@@ -119,4 +119,4 @@ function toggleClass(btn, overlay,navbar, hide, opacity) {
     
   }
 
-toggleClass(burger, document.body, burgerMenu, "active", "overflow");
+toggleClass(burger, document.body, burgerMenu, "hide", "overflow");
