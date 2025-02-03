@@ -44,6 +44,7 @@
 
   .card__left-top--lowerTittle {
     font-size: 25px;
+    white-space: nowrap;
   }
 
   .navbar__burger {
@@ -162,6 +163,14 @@
       max-width: 700px;
     }
     
+    .accordion__item._open .accordion__item-info{
+      max-height: 200px;
+    }
+
+    .accordion__item-info {
+      overflow: hidden;
+    }
+
     .navbar__wrap {
       font-size: 20px;
     }
@@ -182,8 +191,8 @@
       background-color: #191A23;
       padding: 45px;
       border-radius: 45px;
-      max-width: 370px;
-      height: 270px;
+      max-width: 350px;
+      height: 250px;
     }
 
     .case__content-title {
@@ -282,6 +291,7 @@
     .proposal__wrap {
       align-items: center;
       justify-content: center;
+      border-radius: 14px;
     }
   
     .contact__wrap::after,
@@ -555,6 +565,7 @@
 
    .card__right {
     max-width: 130px;
+    min-width: 130px;
    }
 
   .case__wrap {
@@ -568,12 +579,13 @@
   }
 
   .case__scroll {
-    padding: 0 0 20px 20px;
+    padding: 0 0 20px 0px;
   }
 
   .case__content {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
+    min-width: 320px;
   }
 
   .team__card {
@@ -609,7 +621,7 @@
    }
 
    .case__wrap {
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 0px;
    }
 
    .case__content {
@@ -619,6 +631,11 @@
    .footer__subscription {
     width: 100%;
     max-width: 290px;
+   }
+
+   .case__content-title {
+    font-size: 16px;
+    line-height: 19px;
    }
 
    .team__card {
@@ -659,6 +676,18 @@
     height: 20px;
     top: 13px;
    }
+
+   .team__card-content-name > :nth-child(1),
+    .team__card-content-name > :nth-child(2) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .team__card-content-linkedin {
+      width: 28px;
+      height: 28px;
+      right: -20px;
+    }
   }
   
   @media screen and (max-width: 310px) {
@@ -672,18 +701,6 @@
 
     .accordion__item-info::before {
       top: 3px;
-    }
-
-    .team__card-content-name > :nth-child(1),
-    .team__card-content-name > :nth-child(2) {
-      font-size: 14px;
-      line-height: 18px;
-    }
-
-    .team__card-content-linkedin {
-      width: 28px;
-      height: 28px;
-      right: -20px;
     }
 
     .footer__subscription-email {
@@ -700,5 +717,14 @@
 
     .proposal__left {
      padding: 30px;
+    }
+
+    .case__scroll {
+      padding: 0 0 10px 0px;
+    }
+
+    .case__content {
+      max-width: 270px;
+      min-width: 270px;
     }
   }

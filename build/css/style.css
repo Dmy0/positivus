@@ -13,6 +13,7 @@ html {
 
 body {
     font-family: var(--fonts-space-reg);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -346,11 +347,12 @@ body {
     background-color: var(--grey);
     gap: 190px;
     position: relative;
+    border-radius: 45px;
   }
 
   .proposal__illustration {
     position: absolute;
-    bottom: 0px;
+    bottom: -35px;
     right: 50px;
     background: url(../img/proposal/proposal-illustration.png) no-repeat center;
     background-size: contain;
