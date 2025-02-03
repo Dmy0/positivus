@@ -84,6 +84,7 @@ function setSlider(sliderWrap, slidePosition) {
 
     moveLeft.addEventListener("click", () =>{
         --currentSlide  < 0 ? currentSlide = slides.length -1 : currentSlide
+        starsNavigation(document.querySelectorAll(".stars-img"))
         removeSlidesPosition()
         addSlidesPosition()
         moveLeft.style.pointerEvents = "none"
@@ -94,6 +95,7 @@ function setSlider(sliderWrap, slidePosition) {
     
     moveRight.addEventListener("click", () =>{
         ++currentSlide > slides.length - 1 ? currentSlide = 0 : currentSlide
+        starsNavigation(document.querySelectorAll(".stars-img"))
         removeSlidesPosition()
         addSlidesPosition()
         moveRight.style.pointerEvents = "none"
